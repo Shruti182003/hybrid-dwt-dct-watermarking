@@ -11,9 +11,6 @@ from skimage.metrics import (
     structural_similarity as ssim
 )
 
-from sklearn.metrics import (
-    mean_squared_error
-)
 
 
 # =====================================================
