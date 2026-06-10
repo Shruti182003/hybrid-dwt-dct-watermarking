@@ -1,80 +1,125 @@
-# Hybrid DWT-DCT Watermarking System with NSGA-II Optimization
+# 🔐 Hybrid DWT-DCT Watermarking System with NSGA-II Optimization
 
-## Overview
+## 🌐 Live Demo
 
-This project presents a robust digital image watermarking framework based on a Hybrid Discrete Wavelet Transform (DWT) and Discrete Cosine Transform (DCT) approach. The system embeds an invisible watermark into a host image while maintaining high visual quality and robustness against various image processing attacks.
+🚀 **Streamlit Application**
 
-The proposed method employs:
-
-* Hybrid DWT-DCT watermark embedding
-* Multi-band embedding (LL, LH, HL)
-* Multi-coefficient DCT embedding
-* Majority voting extraction
-* NSGA-II multi-objective optimization
-* Attack robustness analysis
-* Baseline comparison with DCT-only and DWT-only approaches
-* Streamlit-based interactive dashboard
+https://hybrid-dwt-dct-watermarking-2gdzlqek2qqfsvmkzmpds7.streamlit.app/
 
 ---
 
-## Features
+## 📌 Project Overview
 
-### Watermark Embedding
+This project presents a robust digital image watermarking framework based on a hybrid **Discrete Wavelet Transform (DWT)** and **Discrete Cosine Transform (DCT)** architecture.
 
-* Invisible watermark embedding
-* Multi-band DWT decomposition
-* DCT coefficient modification
-* Adjustable embedding strengths (Alpha and Beta)
+The system embeds an invisible watermark into a host image while maintaining high visual quality and robustness against image processing attacks.
 
-### Watermark Extraction
+To further enhance performance, **NSGA-II Multi-Objective Optimization** is used to determine optimal embedding parameters.
 
-* Watermark recovery from watermarked images
-* Majority voting mechanism
-* Redundancy-based extraction
-
-### Optimization
-
-* NSGA-II optimization
-* Automatic Alpha-Beta parameter tuning
-* Pareto Front generation
-
-### Attack Analysis
-
-Supported attacks:
-
-* Gaussian Noise
-* Salt & Pepper Noise
-* JPEG Compression
-* Gaussian Blur
-* Resize Attack
-* Rotation Attack
-* Cropping Attack
-* Contrast Adjustment
-* Brightness Modification
-* Combined Attack
-
-### Evaluation Metrics
-
-* PSNR (Peak Signal-to-Noise Ratio)
-* SSIM (Structural Similarity Index)
-* NC (Normalized Correlation)
-* BER (Bit Error Rate)
-
-### Research Visualizations
-
-* Pareto Front Plot
-* PSNR vs Alpha
-* SSIM vs Alpha
-* NC vs Alpha
-* Attack Robustness Graphs
-* Baseline Comparison Graphs
+The project is deployed as an interactive Streamlit web application for real-time watermark embedding, extraction, optimization, and analysis.
 
 ---
 
-## Project Structure
+## 🎯 Objectives
+
+- Protect digital image ownership
+- Embed invisible watermarks securely
+- Improve robustness against attacks
+- Optimize embedding parameters using NSGA-II
+- Provide an interactive web-based platform
+
+---
+
+## ✨ Features
+
+### 🔹 Watermark Embedding
+
+- Hybrid DWT-DCT watermarking
+- Adjustable embedding strength
+- Invisible watermark insertion
+- Real-time image processing
+
+### 🔹 Watermark Extraction
+
+- Recover embedded watermark
+- Visual comparison with original watermark
+
+### 🔹 Performance Evaluation
+
+- PSNR (Peak Signal-to-Noise Ratio)
+- SSIM (Structural Similarity Index)
+- NC (Normalized Correlation)
+- BER (Bit Error Rate)
+
+### 🔹 Attack Robustness Analysis
+
+Supported attacks include:
+
+- Gaussian Noise
+- Salt & Pepper Noise
+- JPEG Compression
+- Gaussian Blur
+- Image Resizing
+- Rotation
+- Cropping
+- Brightness Adjustment
+- Contrast Modification
+
+### 🔹 NSGA-II Optimization
+
+Multi-objective optimization for:
+
+- Maximizing PSNR
+- Maximizing SSIM
+- Maximizing NC
+- Minimizing BER
+
+### 🔹 Research Visualizations
+
+- Pareto Front Analysis
+- Parameter Optimization Graphs
+- Robustness Analysis Charts
+- Baseline Comparison Graphs
+
+### 🔹 Automated Report Generation
+
+Generate project reports directly from the dashboard.
+
+---
+
+## 🏗️ System Architecture
 
 ```text
-watermarking_research_app/
+Host Image
+      │
+      ▼
+      DWT
+      │
+      ▼
+      DCT
+      │
+      ▼
+Watermark Embedding
+      │
+      ▼
+Watermarked Image
+      │
+      ▼
+Attack Simulation
+      │
+      ▼
+Watermark Extraction
+      │
+      ▼
+Performance Evaluation
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+hybrid-dwt-dct-watermarking/
 
 ├── app.py
 ├── watermark_core.py
@@ -84,41 +129,40 @@ watermarking_research_app/
 ├── visualization.py
 ├── requirements.txt
 ├── README.md
-│
-├── assets/
-├── outputs/
-└── results/
+└── .gitignore
 ```
 
 ---
 
-## Installation
+## 🛠️ Technologies Used
+
+### Programming Language
+
+- Python
+
+### Libraries & Frameworks
+
+- Streamlit
+- OpenCV
+- NumPy
+- SciPy
+- PyWavelets
+- Matplotlib
+- Pandas
+- Scikit-Image
+- Pymoo
+- Pillow
+
+---
+
+## ⚙️ Installation
 
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
-cd watermarking_research_app
-```
+git clone https://github.com/your-username/hybrid-dwt-dct-watermarking.git
 
-### Create Virtual Environment (Optional)
-
-```bash
-python -m venv venv
-```
-
-Activate:
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-Linux/Mac:
-
-```bash
-source venv/bin/activate
+cd hybrid-dwt-dct-watermarking
 ```
 
 ### Install Dependencies
@@ -127,189 +171,122 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
----
-
-## Run Application
+### Run Application
 
 ```bash
 streamlit run app.py
 ```
 
-Application will launch at:
+---
 
-```text
-http://localhost:8501
-```
+## 🚀 Deployment
+
+This application is deployed on Streamlit Community Cloud.
+
+### Live Link
+
+https://hybrid-dwt-dct-watermarking-2gdzlqek2qqfsvmkzmpds7.streamlit.app/
 
 ---
 
-## Workflow
+## 📊 Evaluation Metrics
 
-### Step 1
+### PSNR
 
-Upload Host Image
+Measures image quality after watermark embedding.
 
-### Step 2
+Higher values indicate better imperceptibility.
 
-Upload Watermark Image
+### SSIM
 
-### Step 3
+Measures structural similarity between images.
 
-Navigate to Watermarking Page
+Values closer to 1 indicate better similarity.
 
-### Step 4
+### NC
 
-Select Alpha and Beta values
+Measures watermark extraction accuracy.
 
-### Step 5
+Values closer to 1 indicate successful recovery.
 
-Run Watermark Embedding
+### BER
 
-### Step 6
+Measures watermark bit extraction errors.
 
-Extract Watermark
-
-### Step 7
-
-Evaluate Metrics
-
-### Step 8
-
-Run NSGA-II Optimization
-
-### Step 9
-
-Perform Attack Analysis
-
-### Step 10
-
-Generate Research Report
+Lower values indicate better performance.
 
 ---
 
-## Methodology
+## 🔬 Experimental Workflow
 
-### DWT Decomposition
-
-The host image is decomposed into:
-
-* LL
-* LH
-* HL
-* HH
-
-sub-bands using Haar Wavelet Transform.
-
-### DCT Embedding
-
-DCT is applied to each selected sub-band and watermark bits are embedded into selected mid-frequency coefficients.
-
-### Multi-Band Embedding
-
-Watermark information is redundantly embedded into:
-
-* LL Band
-* LH Band
-* HL Band
-
-to improve robustness.
-
-### Majority Voting Extraction
-
-During extraction, watermark bits recovered from multiple bands are combined using majority voting to improve reliability.
-
-### NSGA-II Optimization
-
-Embedding parameters are optimized using NSGA-II considering:
-
-* Maximize PSNR
-* Maximize SSIM
-* Maximize NC
-* Minimize BER
+1. Upload Host Image
+2. Upload Watermark Image
+3. Select Embedding Parameters
+4. Embed Watermark
+5. Extract Watermark
+6. Evaluate Metrics
+7. Run NSGA-II Optimization
+8. Perform Attack Analysis
+9. Generate Research Report
 
 ---
 
-## Experimental Evaluation
+## 📈 Future Enhancements
 
-### Image Quality Metrics
-
-* PSNR
-* SSIM
-
-### Watermark Robustness Metrics
-
-* NC
-* BER
-
-### Attack Resistance Testing
-
-Evaluation is performed under multiple image processing attacks.
+- DWT-DCT-SVD Watermarking
+- Blind Watermark Extraction
+- Color Image Watermarking
+- QR-Code Based Watermarks
+- Deep Learning Watermarking
+- Medical Image Security
+- Video Watermarking
+- Blockchain-Based Copyright Protection
 
 ---
 
-## Baseline Comparison
+## 🎓 Academic Significance
 
-The proposed method is compared against:
+This project demonstrates:
 
-| Method          | Description                  |
-| --------------- | ---------------------------- |
-| DCT Only        | Traditional DCT Watermarking |
-| DWT Only        | Traditional DWT Watermarking |
-| Proposed Hybrid | Hybrid DWT-DCT + NSGA-II     |
+- Digital Image Processing
+- Information Security
+- Optimization Algorithms
+- Signal Processing
+- Research-Oriented Software Development
 
----
+The system can be used for:
 
-## Results
-
-Expected outcomes:
-
-* High PSNR (> 40 dB)
-* High SSIM (> 0.95)
-* High NC (> 0.95)
-* Low BER (< 0.05)
-
-The proposed hybrid framework demonstrates superior imperceptibility and robustness compared to conventional watermarking approaches.
+- Copyright Protection
+- Digital Rights Management
+- Content Authentication
+- Secure Multimedia Distribution
 
 ---
 
-## Future Scope
+## 👩‍💻 Author
 
-* Deep Learning-based Watermarking
-* Blind Watermark Extraction
-* Medical Image Security
-* Video Watermarking
-* Blockchain-based Copyright Protection
-* Federated Watermarking Systems
+**Shruti Shreya**
 
----
+B.Tech – Computer Science & Engineering
 
-## Technologies Used
-
-* Python
-* Streamlit
-* OpenCV
-* NumPy
-* SciPy
-* PyWavelets
-* Matplotlib
-* Pandas
-* Pymoo
-* Scikit-Image
+Dr. B.C. Roy Engineering College, Durgapur
 
 ---
 
-## Authors
+## 📜 License
 
-Final Year B.Tech Project
+This project is developed for academic and research purposes.
 
-Department of Computer Science and Engineering
-
-Project Title:
-
-**Hybrid DWT-DCT Watermarking System with NSGA-II Optimization for Robust Copyright Protection**
+Feel free to use and extend it with proper attribution.
 
 ---
 
-## License
+## ⭐ Support
 
-This project is intended for academic and research purposes.
+If you found this project useful:
+
+⭐ Star the repository
+
+🔗 Share the project
+
+🚀 Try the live Streamlit demo
