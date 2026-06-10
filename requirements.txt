@@ -1,0 +1,10 @@
+streamlit
+numpy
+opencv-python-headless
+scipy
+PyWavelets
+scikit-image
+matplotlib
+pandas
+pymoo
+Pillow
